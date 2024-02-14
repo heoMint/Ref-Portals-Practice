@@ -1,11 +1,12 @@
 import { useState, useRef } from 'react';
 
 export default function Player() {
-    const playerName = useRef('');
+    const playerName = useRef();
     const [entityName, setEntityName] = useState(null);
 
     function handleClick() {
         setEntityName(playerName.current.value);
+        playerName.current.value = '';
     }
     return (
         <section id="player">
