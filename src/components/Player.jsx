@@ -4,13 +4,12 @@ export default function Player() {
     const playerName = useRef();
     const [entityName, setEntityName] = useState(null);
 
-    function inputClean () {
-      playerName.current.value = '';
+    function inputClean() {
+        playerName.current.value = '';
     }
     function handleClick() {
         setEntityName(playerName.current.value);
         inputClean();
-        
     }
     return (
         <section id="player">
