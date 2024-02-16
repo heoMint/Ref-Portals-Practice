@@ -8,10 +8,10 @@ export default function TimerChallenge({ ref, title, targetTime }) {
     let dialog = useRef();
 
     function handelStart() {
-        timer.current = setTimeout(() => {
+        timer.current = setInterval(() => {
             setTimerExpired(true);
             dialog.current.open();
-        }, targetTime * 1000);
+        }, 10); // 10 => 10ms
 
         setTimerStarted(true);
     }
